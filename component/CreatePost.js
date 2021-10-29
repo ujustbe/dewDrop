@@ -23,9 +23,9 @@ const CreatePost = () => {
 
     // Add a new document in collection "cities" with ID 'LA'
     addDoc(collection(db, "users"), {
-      first: "Ada2",
-      last: "Lovelace2",
-      born: 181555
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
     });
 
 
@@ -38,7 +38,6 @@ const CreatePost = () => {
   }
 
   useEffect(() => {
-    const docRef = doc(db, "users");
     const querySnapshot = getDocs(collection(db, "users"));
     console.log(querySnapshot);
   }, [])
